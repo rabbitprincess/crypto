@@ -12,7 +12,7 @@ func Test_bcrypt(_t *testing.T) {
 		_t.Fatal(err)
 	}
 
-	is_valid, err := Verify(hash, pw)
+	is_valid, err := Decrypt(hash, pw)
 	if is_valid != true {
 		_t.Errorf("err")
 	}

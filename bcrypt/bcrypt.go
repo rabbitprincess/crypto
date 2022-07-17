@@ -23,7 +23,7 @@ func Encrypt(_pw []byte) ([]byte, error) {
 	return hash, nil
 }
 
-func Verify(_hash, _pw []byte) (bool, error) {
+func Decrypt(_hash, _pw []byte) (bool, error) {
 	err := bcrypt.CompareHashAndPassword(_hash, _pw)
 	if err != nil {
 		if err == bcrypt.ErrMismatchedHashAndPassword {
